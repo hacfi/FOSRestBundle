@@ -262,7 +262,7 @@ class FOSRestExtension extends Extension
                 $service->clearTag('kernel.event_listener');
             }
 
-            $container->getDefinition('fos_rest.mime_type_listener')->replaceArgument(0, $config['view']['mime_types']);
+            $container->getDefinition('fos_rest.mime_type_listener')->replaceArgument(0, $config['view']['mime_types']['formats']);
         }
 
         if ($config['view']['view_response_listener']['enabled']) {
